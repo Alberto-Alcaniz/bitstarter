@@ -6,7 +6,7 @@ var fs = require('fs');
 
 app.get('/', function(request, response) {
 //  response.send('Hello World2!');
-    response.send( fs.readFile('index.html', encoding) );
+    response.send( fs.readFile('index.html', 'utf8') );
 
 });
 
