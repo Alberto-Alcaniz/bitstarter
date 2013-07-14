@@ -7,8 +7,10 @@ var fs = require('fs');
 
 app.get('/', function(request, response) {
 //  response.send('Hello World2!');
-    var buffer = new Buffer( fs.readFileSync('index.html') ); 
-//FIXME    response.send( buffer.toString('utf8', 0, 25) );
+    var buffer = new Buffer( 25 ); 
+    var buffer.write( fs.readFileSync('index.html') );
+
+//    response.send( buffer.toString('utf8', 0, 25) );
     response.send('Hello World2!');
 });
 
