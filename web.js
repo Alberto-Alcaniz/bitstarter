@@ -8,8 +8,8 @@ var fs = require('fs');
 app.get('/', function(request, response) {
 //  response.send('Hello World2!');
     var buffer = new Buffer( fs.readFileSync('index.html') ); 
-    response.send( buffer.toString('utf8', 0, 25) );
-
+//FIXME    response.send( buffer.toString('utf8', 0, 25) );
+    response.send('Hello World2!');
 });
 
 var port = process.env.PORT || 5000;
